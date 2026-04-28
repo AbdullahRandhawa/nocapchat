@@ -1,0 +1,285 @@
+.login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+}
+
+/* ──────────────────────────────────────────────────────────
+   LEFT: Intro Panel (Landing Info) 
+   ────────────────────────────────────────────────────────── */
+.intro-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(17, 25, 40, 0.9), rgba(25, 33, 50, 0.95));
+    border-right: 1px solid var(--bg-tertiary);
+}
+
+.intro-panel .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.intro-panel .brand-logo h1 {
+    font-size: 3rem;
+    color: white;
+    font-family: var(--font-display);
+    letter-spacing: -0.5px;
+}
+
+.intro-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: white;
+    font-family: var(--font-display);
+}
+
+.intro-content h2 .highlight {
+    color: var(--primary);
+
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature-list li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.feature-list .icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.feature-list .icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.feature-list strong {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.feature-list p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ──────────────────────────────────────────────────────────
+   RIGHT: Form Toggle Panel 
+   ────────────────────────────────────────────────────────── */
+.form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 40px;
+}
+
+.form-box h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    font-family: var(--font-display);
+    margin-bottom: 15px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.form-box input {
+    width: 100%;
+    border: 1px solid #000000;
+    color: var(--text-dark);
+    border-radius: var(--radius-sm);
+    padding: 10px 15px;
+    outline: none;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.form-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(255, 56, 92, 0.2);
+}
+
+.form-box input::placeholder {
+    color: var(--text-light);
+}
+
+.form-box label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.form-box label:hover {
+    color: var(--text-dark);
+}
+
+.form-box label img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--bg-tertiary);
+}
+
+.form-box button:not(.toggle-btn) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    background-color: var(--primary);
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.form-box button:not(.toggle-btn):hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.form-box button:not(.toggle-btn):disabled {
+    background-color: var(--bg-tertiary);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+/* ── Toggle UI at the bottom of the form ── */
+.toggle-auth {
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
+    border-top: 1px solid var(--bg-tertiary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.toggle-auth .toggle-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.toggle-auth .toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color var(--transition-fast);
+}
+
+.toggle-auth .toggle-btn:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* ──────────────────────────────────────────────────────────
+   MOBILE & TABLET RESPONSIVENESS
+   ────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .login {
+        flex-direction: column;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .login::-webkit-scrollbar {
+        display: none;
+    }
+
+    .intro-panel {
+        padding: 40px 40px;
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-tertiary);
+    }
+
+    .intro-panel .brand-logo {
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+
+    .intro-content h2 {
+        font-size: 2rem;
+
+    }
+
+    .form-panel {
+        padding: 30px 20px;
+        flex: none;
+    }
+
+    .form-box {
+        padding: 30px 20px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}

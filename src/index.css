@@ -1,0 +1,175 @@
+:root {
+  /* Color Palette */
+  --primary: #FF385C;
+  /* The iconic pinkish-red */
+  --primary-hover: #D90B38;
+  /* Darker red for hover states */
+  --secondary: #00A699;
+  /* Accent color */
+
+  /* Text Colors */
+  --text-dark: #1a1a2e;
+  --text-muted: #666666;
+  --text-light: #aaaaaa;
+
+  /* Background Colors - Clean Light Theme */
+  --bg-main: #ffffff;
+  --bg-secondary: #f0f2f5;
+  --bg-tertiary: #d1d5db;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Shadows & Elevations */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.4);
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  /* 8px - Buttons, Inputs */
+  --radius-md: 0.75rem;
+  /* 12px - Chat bubbles */
+  --radius-lg: 1rem;
+  /* 16px - Large cards, Sidebar containers */
+  --radius-xl: 1.5rem;
+  /* 24px - Main app container */
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.2, 0, 0, 1);
+  --transition-medium: 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --bg-main: #141414;
+  --bg-secondary: #1F1F1F;
+  --bg-tertiary: #2C2C2C;
+  --text-dark: #EDEDED;
+  --text-muted: #A0A0A0;
+  --text-light: #606060;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* Component Specific Overrides for Dark Mode */
+:root[data-theme="dark"] .chat .center,
+:root[data-theme="dark"] .chat .bottom,
+:root[data-theme="dark"] .chat .attachmentsPreviewContainer {
+  background-color: var(--bg-secondary) !important;
+}
+
+:root[data-theme="dark"] .chat .center .message .texts p {
+  background-color: var(--bg-main) !important;
+  color: var(--text-dark) !important;
+  border-color: var(--bg-tertiary) !important;
+}
+
+:root[data-theme="dark"] .chat .center .message.own .texts p {
+  background: linear-gradient(135deg, #ff385c 0%, #e0294d 100%) !important;
+  color: #fff !important;
+}
+
+:root[data-theme="dark"] .detail .user .userTopRow .userNameBox h2,
+:root[data-theme="dark"] .detail .info.scrollableInfo h3 {
+  color: var(--text-dark) !important;
+}
+
+:root[data-theme="dark"] .detail .user .userTopRow .userNameBox .userTag,
+:root[data-theme="dark"] .detail .user .userBio {
+  color: var(--text-muted) !important;
+}
+
+:root[data-theme="dark"] .chatList .search .searchBar img {
+  filter: opacity(0.8) invert(1) brightness(2) !important;
+}
+
+:root[data-theme="dark"] .detail .info.scrollableInfo .fileList .fileItem {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-dark) !important;
+}
+
+:root[data-theme="dark"] .detail .info.scrollableInfo .fileList .fileItem:hover {
+  background-color: var(--bg-secondary) !important;
+}
+
+:root[data-theme="dark"] .chat .center .message .texts .file-attachment .file-attachment-card {
+  background-color: var(--bg-main) !important;
+}
+
+:root[data-theme="dark"] .chat .center .message .texts .file-attachment .file-attachment-card .file-info .file-name {
+  color: var(--text-dark) !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+  height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-main);
+  border-radius: 0;
+  display: flex;
+  overflow: hidden;
+  color: var(--text-dark);
+  box-shadow: none;
+  border: none;
+}
+
+/* Full-screen override on mobile — no wasted margins */
+@media (max-width: 768px) {
+  .container {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}

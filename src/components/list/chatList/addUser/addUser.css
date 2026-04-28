@@ -1,0 +1,98 @@
+.adduser {
+    width: max-content;
+    height: max-content;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-main);
+    box-shadow: var(--shadow-lg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    border: 1px solid var(--bg-tertiary);
+
+    form {
+        display: flex;
+        gap: 10px;
+
+        input {
+            border: 1px solid var(--bg-tertiary);
+            padding: 10px 15px;
+            outline: none;
+            border-radius: var(--radius-sm);
+            color: var(--text-dark);
+            background-color: var(--bg-secondary);
+            font-size: 0.95rem;
+
+            &::placeholder {
+                color: var(--text-light);
+            }
+        }
+
+        button {
+            outline: none;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            transition: background-color var(--transition-fast), transform var(--transition-fast);
+
+            &:hover {
+                background-color: var(--primary-hover);
+                transform: scale(0.98);
+            }
+        }
+    }
+
+    .user {
+        display: flex;
+        margin-top: 25px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: var(--bg-secondary);
+        border-radius: var(--radius-md);
+
+        .detail {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            span {
+                color: var(--text-dark);
+                font-weight: 600;
+            }
+        }
+
+        button {
+            outline: none;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            transition: background-color var(--transition-fast), transform var(--transition-fast);
+
+            &:hover {
+                background-color: var(--primary-hover);
+                transform: scale(0.98);
+            }
+        }
+    }
+}

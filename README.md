@@ -12,7 +12,7 @@
 
 ## Recommended README Structure
 
-```markdown
+
 # NoCap Chat
 
 A modern, real-time chat application with rich media support and responsive design.
@@ -155,13 +155,3 @@ MIT
 
 Abdullah Randhawa
 
-## Getting Help
-
-If you encounter any issues:
-1. Check existing GitHub Issues
-2. Ensure Firebase and Cloudinary are properly configured
-3. Clear browser cache and cookies
-4. Check browser console for error messages
-```
-
-This README covers all the essential information a user needs to understand and use your project!
